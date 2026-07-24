@@ -44,6 +44,6 @@
 
 Ссылки на проверенный бесплатный софт из моего гайда по разгону домашней сети:
 
-* 📱 **Android:** [Wi-Fi Analyzer (F-Droid)](https://f-droid.org) — опенсорсный сканер частот без рекламы.
+* 📱 **Android:** [Wi-Fi Analyzer (Google Play)](https://play.google.com/store/apps/details?id=com.vrem.wifianalyzer) — опенсорсный сканер частот без рекламы.
 * 🪟 **Windows:** [Ubiquiti WiFiman](https://ui.com) — наглядные графики интерференции сетей.
 * 🐧 **Linux:** `sudo iwlist scan` или утилита `LinSSID` для сканирования окружения прямо из Kitty.
