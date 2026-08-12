@@ -1,0 +1,42 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 0,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 0,
+  "reload_style_on_change": true,
+  "fixed-center": true,
+
+  "include": [
+    "~/.config/waybar/modules/workspaces.jsonc",
+    "~/.config/waybar/modules/clock.jsonc",
+    "~/.config/waybar/modules/player.jsonc",
+    "~/.config/waybar/modules/pulseaudio.jsonc",
+    "~/.config/waybar/modules/network.jsonc",
+    "~/.config/waybar/modules/bluetooth.jsonc",
+    "~/.config/waybar/modules/clipboard.jsonc",
+    "~/.config/waybar/modules/notifications.jsonc",
+    "~/.config/waybar/modules/power.jsonc",
+    "~/.config/waybar/modules/cpu.jsonc",
+    "~/.config/waybar/modules/memory.jsonc",
+  ],
+
+  "modules-left": [
+    "niri/workspaces",
+  ],
+
+  "modules-center": ["custom/player", "clock"],
+
+  "modules-right": [
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "network",
+    "bluetooth",
+    "custom/clipboard",
+    "custom/notifications",
+    "custom/power",
+  ],
+}
