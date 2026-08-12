@@ -1,0 +1,14 @@
+{
+  "bluetooth": {
+    "format": "󰂯 {status}",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-connected": "󰂯 {num_connections}",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}",
+    "tooltip-format-enumerate-connected": "   {device_alias}\t{device_address}",
+    "on-click": "blueman-manager",
+    "on-click-right": "rfkill toggle bluetooth"
+  }
+}
