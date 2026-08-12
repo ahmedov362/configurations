@@ -1,7 +1,0 @@
-{
-  // ───────── Workspaces ─────────
-  "niri/workspaces": {
-    "format": "{value}",
-    "all-outputs": true
-  }
-}
