@@ -1,0 +1,76 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 0,
+  "reload_style_on_change": true,
+  "fixed-center": true,
+
+  "include": [
+    "~/.config/waybar/modules/workspaces.jsonc",
+    "~/.config/waybar/modules/clock.jsonc",
+    "~/.config/waybar/modules/player.jsonc",
+    "~/.config/waybar/modules/pulseaudio.jsonc",
+    "~/.config/waybar/modules/network.jsonc",
+    "~/.config/waybar/modules/bluetooth.jsonc",
+    "~/.config/waybar/modules/clipboard.jsonc",
+    "~/.config/waybar/modules/notifications.jsonc",
+    "~/.config/waybar/modules/power.jsonc",
+    "~/.config/waybar/modules/cpu.jsonc",
+    "~/.config/waybar/modules/memory.jsonc",
+    "~/.config/waybar/modules/language.jsonc"
+  ],
+
+  "modules-left": [
+    "niri/workspaces",
+    "custom/niri-lang",
+    "custom/niri-caps",
+    "custom/clipboard"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "group/media",
+    "group/system",
+    "custom/notifications",
+    "custom/power"
+  ],
+
+  "group/system": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": ["cpu", "memory"]
+  },
+
+  "group/media": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": ["pulseaudio", "custom/player", "network", "bluetooth"]
+  },
+
+  // Запуск нашего нового сверхэффективного скрипта
+  "custom/niri-lang": {
+    "exec": "~/.config/waybar/niri_lang.py",
+    "format": "🌐 {}",
+    "tooltip": false
+  },
+
+  "custom/niri-caps": {
+    "exec": "grep -q '1' /sys/class/leds/input*::capslock/brightness 2>/dev/null && echo '🔠 CAPS' || echo ''",
+    "interval": 0.25,
+    "format": "{}",
+    "tooltip": false
+  }
+}
