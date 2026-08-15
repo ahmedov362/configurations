@@ -38,3 +38,6 @@ fish/fish_variables
 
 # Секреты fish (никогда не коммитить!)
 fish/fish_variables*
+
+# Waybar (не используем, но wallust его пересоздаёт)
+waybar/
