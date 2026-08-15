@@ -264,3 +264,24 @@
 * 📱 **Android:** [Wi-Fi Analyzer (Google Play)](https://play.google.com/store/apps/details?id=com.vrem.wifianalyzer) — опенсорсный сканер частот без рекламы.
 * 🪟 **Windows:** [Ubiquiti WiFiman](https://ui.com) — наглядные графики интерференции сетей.
 * 🐧 **Linux:** `sudo iwlist scan` или утилита `LinSSID` для сканирования окружения прямо из Kitty.
+# 🐧 My Fedora + niri config
+
+## Setup
+- **Distro:** Fedora Linux 44
+- **WM:** niri (Wayland)
+- **Shell:** fish
+- **Terminal:** kitty
+- **Panel:** Noctalia (Quickshell)
+- **Colors:** wallust (auto-sync с обоями)
+
+## Что внутри
+- `niri/` — конфиг WM
+- `rofi/` — тема + скрипты (wiki, calc, translate, switch раскладки)
+- `wallust/` — шаблоны для авто-темизации
+- `scripts/theme.py` — синхронизация цветов kitty/niri
+
+## Автосинк цветов
+Хук Noctalia → wallust → все приложения перекрашиваются при смене обоев.
+
+---
+**Автор:** Шамиль, 12 лет. YouTube: [SynByte](https://youtube.com/@Syntex_Lab)
