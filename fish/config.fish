@@ -45,3 +45,8 @@ alias aliases='fish ~/Projects/lessons/main.fish '
 alias sfish 'source ~/.config/fish/config.fish'
 alias clr clear
 alias ls lsd
+
+# Подгрузка секретов
+if test -f ~/.env
+    source ~/.env
+end
