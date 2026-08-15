@@ -2,5 +2,5 @@
     bg:     {{background}};
     bg-alt: {{color8}};
     fg:     {{foreground}};
-    accent: {{color4}};
+    accent: {{color5}};
 }

@@ -1,82 +1,106 @@
+@import "wallust/colors-rofi.rasi"
+
 * {
-    fg:       @foreground;
-    accent:   @selected-normal-background;
-    urgent:   @urgent-background;
-    
     background-color: transparent;
-    text-color: @fg;
-    border: 0;
-    margin: 0;
-    padding: 0;
-    spacing: 0;
+    text-color:       @fg;
+    border:           0;
+    margin:           0;
+    padding:          0;
+    spacing:          0;
+    font:             "FantasqueSansM Nerd Font Mono Bold 12";
 }
 
 window {
-    background-color: rgba(30, 30, 46, 0.85);
-    border: 2px solid;
-    border-color: @accent;
-    border-radius: 14px;
-    width: 500px;
-    padding: 15px;
+    background-color: @bg;
+    border:           1px solid;
+    border-color:     @accent;
+    border-radius:    16px;
+    width:            520px;
+    padding:          20px;
+    location:         center;
+    anchor:           center;
+    transparency:     "real";
 }
 
 mainbox {
-    background-color: transparent;
     children: [inputbar, listview];
-    spacing: 15px;
+    spacing:  16px;
 }
 
 inputbar {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-radius: 8px;
-    padding: 10px;
-    children: [prompt, entry];
+    background-color: @bg-alt;
+    border-radius:    10px;
+    padding:          12px 16px;
+    spacing:          12px;
+    orientation:      horizontal;
+    children:         [prompt, entry];
 }
 
 prompt {
-    background-color: transparent;
-    text-color: @accent;
-    padding: 0 10px 0 0;
+    text-color:  @accent;
+    font:        "FantasqueSansM Nerd Font Mono Bold 12";
+    padding:     0 12px 0 0;
+    expand:      false;
 }
 
 entry {
-    background-color: transparent;
-    placeholder: "Поиск...";
-    placeholder-color: @fg;
+    cursor:  text;
+    expand:  true;
 }
 
 listview {
-    background-color: transparent;
-    lines: 8;
-    columns: 1;
-    spacing: 5px;
-    scrollbar: false;
+    lines:        8;
+    columns:      1;
+    spacing:      4px;
+    scrollbar:    false;
+    fixed-height: false;
+    dynamic:      true;
 }
 
 element {
-    background-color: transparent;
-    padding: 10px;
-    border-radius: 6px;
-    spacing: 10px;
+    padding:       10px 14px;
+    border-radius: 8px;
+    spacing:       12px;
+    cursor:        pointer;
 }
 
-element normal.normal {
-    background-color: transparent;
+element normal normal {
     text-color: @fg;
 }
 
-element selected.normal {
+element normal urgent,
+element normal active {
+    text-color: @accent;
+}
+
+element selected normal,
+element selected urgent,
+element selected active {
     background-color: @accent;
-    text-color: #ffffff;
+    text-color:       @bg;
 }
 
 element-icon {
-    size: 24px;
-    background-color: transparent;
+    size:              22px;
+    vertical-align:    0.5;
+    background-color:  transparent;
+    text-color:        inherit;
+    padding:           0 4px 0 0;
 }
 
 element-text {
-    background-color: transparent;
-    text-color: inherit;
+    text-color:     inherit;
     vertical-align: 0.5;
+    highlight:      bold;
 }
+
+message {
+    background-color: @bg-alt;
+    border-radius:    10px;
+    padding:          10px;
+}
+
+textbox {
+    text-color: @fg;
+}
+
