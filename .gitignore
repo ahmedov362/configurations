@@ -1,0 +1,40 @@
+# Whitelist: игнорируем всё, потом добавляем нужное
+/*
+/*/
+
+# Разрешаем только эти конфиги
+!/rofi/
+!/niri/
+!/kitty/
+!/fish/
+!/wallust/
+!/scripts/
+!/fastfetch/
+!/noctalia/settings.json
+!/waybar/
+
+# Внутри rofi игнорируем сгенерированное wallust
+rofi/wallust/
+
+# Внутри kitty игнорируем сгенерированное wallust
+kitty/kitty-themes/01-Wallust.conf
+
+# Внутри fish не тащим кэши
+fish/fish_variables
+fish/.psub.*
+
+# Общее
+*.log
+*.cache
+*.tmp
+__pycache__/
+*.pyc
+
+fish/fish_variables
+fish/fish_variables
+
+# Исключения для служебных файлов
+!/.gitignore
+
+# Секреты fish (никогда не коммитить!)
+fish/fish_variables*
