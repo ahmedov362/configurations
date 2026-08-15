@@ -41,3 +41,4 @@ fish/fish_variables*
 
 # Waybar (не используем, но wallust его пересоздаёт)
 waybar/
+kitty/kitty-themes/
